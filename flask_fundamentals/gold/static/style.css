@@ -1,0 +1,87 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+#wrapper {
+    height: 500px;
+    width: 800px;
+    margin: 0px auto;
+    padding: 50px;
+    background-image: linear-gradient(300deg, lightgrey, white);
+    text-align: center
+}
+
+
+
+#goldcounter {
+    border: 2px solid grey;
+    width: 200px;
+    text-align: left;
+    padding: 10px;
+    margin-left: 85px
+}
+
+h1 { 
+    text-align: center;
+    
+}
+h3 { 
+    text-align: center;
+    padding-top: 20px;
+}
+h4 {
+    text-align: center;
+    font-size: .8em;
+}
+#farm {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    vertical-align: top;
+    border: 2px groove grey;
+
+}
+input {
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px grey;
+    margin-top: 50px;
+    height: 20px;
+    width: 90px;
+    
+    
+}
+#cave {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    vertical-align: top;
+    border: 2px groove grey;
+
+}
+#house { 
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    vertical-align: top;
+    border: 2px groove grey;
+}
+#casino {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    vertical-align: top;
+    border: 2px groove grey;
+}
+#activities { 
+    display: inline-block;
+    width: 800px;
+    text-align: center;
+    overflow:auto;
+}
+
+p{
+    color: green;
+}

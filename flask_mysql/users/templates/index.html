@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read all</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>All Users</h1>
+
+    <table class="table table-striped">
+        <th>
+            ID
+        </th>
+        <th>
+            Full Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Created At
+        </th>
+        <th>
+            Actions
+        </th>
+        {% for user in user_list %}
+            <tr>
+                <td>
+                    {{user['id']}}
+                </td>
+                <td>
+                    {{user['first_name'] + " " + user['last_name']}}
+                </td>
+                <td>
+                    {{user['email']}}
+                </td>
+                <td>
+                    {{user['created_at']}}
+                </td>
+                <td>
+                    <p>
+                        <a href="/users/{{user['id']}}">Show</a> |
+                        <a href="/users/{{user['id']}}/edit">Edit</a> |
+                        <a href="users/{{user['id']}}/destroy">Delete</a>
+                        <p>
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+    <a href="/users/new">Add a New User</a>
+</body>
+</html>

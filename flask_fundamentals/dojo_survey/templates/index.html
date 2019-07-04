@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <div class="contain">
+        <form id="form1" class="" action="/result" method="post">
+            <p>Your Name: <input type="text" name="name"></p>
+            <p>Dojo Location: 
+                <select name="location">
+                    <option value="San Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option> 
+                    <option value="Chicago">Chicago</option> 
+                    <option value="Dallas">Dallas</option>             
+                </select>
+            </p>
+            <p>
+                Favorite Language:
+                <select name="language">
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Ruby">
+                </select>
+            </p>
+            <p>How do you rate Coding Dojo?</p>
+            <input type="radio" name="rating" value="Bad"> Bad<br>
+            <input type="radio" name="rating" value="Ok" checked="true"> OK<br>
+            <input type="radio" name="rating" value="Good"> Good<br>
+            <br>
+            <p>Technologies Known:</p>
+            <input type="checkbox" name="tech" value="HTML ">HTML<br>
+            <input type="checkbox" name="tech" value="Javascript ">Javascript<br>
+            <input type="checkbox" name="tech" value="CSS ">CSS<br>
+            <p>Comment (optional):</p>
+            <textarea form="form1" name="comment" rows="4" cols="40"></textarea>
+            <input class = "button btn btn-primary" type="submit" value="Submit">
+        </form>
+    </div>    
+</body>
+</html>

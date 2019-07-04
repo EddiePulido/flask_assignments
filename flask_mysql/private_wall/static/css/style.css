@@ -1,0 +1,26 @@
+.error{
+    font-size: 12px;
+    color: red;
+}
+
+#con{
+    margin: 0px 30px;
+
+}
+
+.success{
+    color: green;
+}
+
+.row{
+    margin-top: 50px;
+}
+
+.message_row *{
+    display: inline-block;
+}
+
+.trash{
+    height:25px;
+    width:25px;
+}

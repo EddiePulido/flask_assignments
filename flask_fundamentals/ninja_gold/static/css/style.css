@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+}
+.container{
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    vertical-align:top;
+}

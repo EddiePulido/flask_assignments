@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit User {{id}}</h1>
+        <form class="form" action="/users/{{id}}/update" method = "post">
+            <label for="first_name">First Name:</label>
+            <input class="form-control" type="text" name="first_name" value="{{first_name}}">
+            <label for="last_name">Last Name:</label>
+            <input class="form-control" type="text" name="last_name" value="{{last_name}}">
+            <label for="email">Email:</label>
+            <input class="form-control" type="text" name="email" value="{{email}}">
+            <input class="btn btn-primary" type="submit" value="Create" >
+        </form>
+    </div>
+</body>
+</html>

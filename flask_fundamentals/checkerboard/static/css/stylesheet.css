@@ -1,0 +1,26 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+td{
+    display: inline-block;
+    height: 30px;
+    width:30px;
+
+
+
+}
+table{
+    border-spacing: 0px;
+}
+
+.red{
+    background-color: var(--color1);
+}
+
+.black{
+    background-color: var(--color2);
+}

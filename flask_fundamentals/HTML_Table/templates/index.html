@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Table</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/stylesheet.css')}}">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <table class="table table-dark table-striped">
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Full Name
+        </th>
+        {% for i in range(user_list|length) %}
+            <tr>
+            
+            {% for k in user_list[i] %}
+                <td>{{user_list[i][k]}}</td>
+                
+            {% endfor %}
+                <td>{{full_names[i]}}</td>
+            </tr>
+        {% endfor %}
+
+
+        <!-- <tr>
+            <td>Michael</td>
+            <td>Choi</td>
+            <td>Michael Choi</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Supsupin</td>
+            <td>John Supsupin</td>
+        </tr>
+        <tr>
+            <td>Mark</td>
+            <td>Guillen</td>
+            <td>Mark Guillen</td>
+        </tr>
+        <tr>
+            <td>KB</td>
+            <td>Tonel</td>
+            <td>KB Tonel</td>
+        </tr> -->
+
+    </table>
+</body>
+</html>

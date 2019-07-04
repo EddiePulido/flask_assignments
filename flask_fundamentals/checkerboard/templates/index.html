@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkerboard</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/stylesheet.css')}}">
+
+</head>
+<body>
+    <table>
+    {% for i in range(rows): %}
+        <tr>
+        {% if i % 2 == 0 %}
+            {% for j in range(columns) %}
+                {% if j % 2 == 0 %}
+                    <td class="red" style="background-color:{{col1}};"></td>
+                {% else %}
+                    <td class="black" style="background-color:{{col2}};"></td>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for j in range(columns) %}
+                {% if j % 2 == 0 %}
+                    <td class="black" style="background-color:{{col2}};"></td>
+                {% else %}
+                    <td class="red" style="background-color:{{col1}};"></td>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

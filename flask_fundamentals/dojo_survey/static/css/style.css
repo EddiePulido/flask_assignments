@@ -1,0 +1,20 @@
+
+
+.contain{
+    padding: 20px;
+    text-align: left;
+    border: 2px solid black;
+    width: 400px;
+    height: 500px;
+    margin: 0px auto;
+}
+
+textarea{
+    display: block;
+
+}
+
+.button{
+    margin-left: 265px;
+    margin-top: 10px;
+}

@@ -1,0 +1,24 @@
+body{
+    text-align: center;
+}
+
+h1{
+    display: inline-block;
+    margin: 20px 0px;
+    padding: 10px 50px;
+    border: 2px solid black;
+    background-color: red;
+}
+
+h2{
+    display: inline-block;
+    margin: 20px 0px;
+    padding: 10px 50px;
+    border: 1px solid black;
+    background-color: lightgreen;
+    width: 500px;
+}
+
+form{
+    margin-top: 50px;
+}

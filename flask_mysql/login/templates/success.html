@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% with messages = get_flashed_messages(category_filter =["success"]) %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p class="success">{{ message }}</p>
+                        {% endfor %}   
+                    {% endif %}
+                {% endwith %}
+    <h1>Welcome, you've been logged in, {{name}}</h1>
+    <a href="/logout">Logout</a>
+</body>
+</html>
